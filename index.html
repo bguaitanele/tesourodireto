@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-ng-app="carteira">
+    <head>
+        <meta charset="utf-8" />
+        <title>Títulos do Tesouro</title>
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="libs/estilo.css"/>
+    </head>
+    <body data-ng-controller="MainCtrl">
+        <header class="navbar" id="top" role="banner">
+
+            <div class="container">
+
+                <nav class="navbar navbar-default" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">Gráficos</a>
+                        </li>
+                        <li>
+                            <a href="#carteira">Carteira</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <div ng-view ng-hide="erro==true"></div>
+            <div ng-show="erro==true" class="alert alert-danger">{{msgErro}}</div>
+        </div>
+
+
+
+
+    </body>
+    <script type="text/javascript" src="libs/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+    <script type="text/javascript" src="libs/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/Highcharts/js/highcharts.js"></script>
+    <script type="text/javascript" src="app/scripts/grafico.js"></script>
+    <script type="text/javascript" src="libs/app.js"></script>
+</html>

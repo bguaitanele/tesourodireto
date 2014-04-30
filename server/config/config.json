@@ -1,0 +1,14 @@
+{
+    "arquivo":{
+        "NTNBp":"NTN-B_Principal",
+        "LFT":"LFT",
+        "LTN":"LTN"
+    },
+    "sheet":{
+        "NTNBp":"NTN-B Principal",
+        "LFT":"LFT",
+        "LTN":"LTN"
+    },
+    "urlBase": "https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/"
+
+}

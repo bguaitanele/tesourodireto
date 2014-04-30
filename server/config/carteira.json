@@ -1,0 +1,91 @@
+[
+    {
+        "titulo":"LFT 070317",
+        "dataCompra":"08/09/2012",
+        "quantidade":0.5
+    },
+
+    {
+        "titulo":"NTNBp 150535",
+        "dataCompra":"08/09/2012",
+        "quantidade":5.0
+    },
+
+    {
+        "titulo":"LTN 010115",
+        "dataCompra":"08/09/2012",
+        "quantidade":1.2
+    },
+
+    {
+        "titulo":"LTN 010116",
+        "dataCompra":"08/09/2012",
+        "quantidade":2.6
+    },
+
+    {
+        "titulo":"LTN 010117",
+        "dataCompra":"06/05/2013",
+        "quantidade":0.2
+    },
+
+    {
+        "titulo":"NTNBp 150515",
+        "dataCompra":"12/09/2012",
+        "quantidade":4.6
+    },
+
+    {
+        "titulo":"NTNBp 150519",
+        "dataCompra":"06/05/2013",
+        "quantidade":0.5
+    },
+
+    {
+        "titulo":"NTNBp 150535",
+        "dataCompra":"30/10/2012",
+        "quantidade":0.6
+    },
+
+    {
+        "titulo":"NTNBp 150535",
+        "dataCompra":"10/12/2012",
+        "quantidade":1.1
+    },
+
+    {
+        "titulo":"NTNBp 150535",
+        "dataCompra":"23/01/2013",
+        "quantidade":1
+    },
+
+    {
+        "titulo":"NTNBp 150824",
+        "dataCompra":"12/09/2012",
+        "quantidade":6.8
+    },
+
+    {
+        "titulo":"NTNBp 150824",
+        "dataCompra":"17/09/2012",
+        "quantidade":0.5
+    },
+    {
+        "titulo":"LFT 070317",
+        "dataCompra":"15/04/2014",
+        "quantidade":0.8
+    },
+    {
+        "titulo":"LTN 010117",
+        "dataCompra":"15/04/2014",
+        "quantidade":3.2
+    },
+
+    {
+        "titulo":"NTNBp 150519",
+        "dataCompra":"28/04/2014",
+        "quantidade":2.0
+    }
+
+
+]
