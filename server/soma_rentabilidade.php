@@ -4,6 +4,18 @@ require_once 'carregar-arquivos-tesouro.php';
 
 $somaAporte = [];
 
+function pegarAporteMes($anomes){
+    global $somaAporte;
+    if(isset($somaAporte[$anomes])) return $somaAporte[$anomes];
+    $valorRequerido = 0;
+    foreach($somaAporte as $data=>$valor){
+        if($data>$anomes) return $valorRequerido;
+        $valorRequerido = $valor;
+    }
+    return $valorRequerido;
+}
+
+
 usort($arrCarteira,function($item1,$item2){
 
     $d1 = DateTime::createFromFormat('d/m/Y',$item1->dataCompra);
@@ -14,17 +26,22 @@ usort($arrCarteira,function($item1,$item2){
 });
 
 ##########
-# aportes
+# pega todos os valores inseridos, separando por mes
 foreach($arrCarteira as $carteira){
 
+    //data da compra do item na carteira
     $dataCompra = DateTime::createFromFormat('d/m/Y',$carteira->dataCompra);
+
+    //abre a planilha do ano em que foi adquirido o item
     $sheet = abrirArquivo($carteira->titulo,$dataCompra->format('Y'));
 
     $linha = 2;
+    //procura o dia em que foi comprado o item
     do{
         $dia = DateTime::createFromFormat('d/m/Y',$sheet->cell('A',++$linha));
         if(!$dia) break;
         if($dia->format('Ymd')>=$dataCompra->format('Ymd')){
+            //calcula valor do aporte
             $cota = $sheet->cell('D',$linha)*$carteira->quantidade;
             if(isset($somaAporte[$dataCompra->format('Ym')]))
                 $somaAporte[$dataCompra->format('Ym')]+=$cota;
@@ -36,16 +53,6 @@ foreach($arrCarteira as $carteira){
     }while($x=true);
 }
 
-function pegarAporteMes($anomes){
-    global $somaAporte;
-    if(isset($somaAporte[$anomes])) return $somaAporte[$anomes];
-    $valorRequerido = 0;
-    foreach($somaAporte as $data=>$valor){
-        if($data>$anomes) return $valorRequerido;
-        $valorRequerido = $valor;
-    }
-    return $valorRequerido;
-}
 
 $arrCarteiraUnica = montarCarteiraUnica($arrCarteira);
 
@@ -76,7 +83,6 @@ foreach($arrCarteiraUnica as $carteira){
         }while($x=true);
     }
 }
-
 
 
 $arrSaida = [];
